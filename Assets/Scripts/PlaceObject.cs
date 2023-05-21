@@ -13,8 +13,9 @@ public class PlaceObject : MonoBehaviour
 
     private ARRaycastManager aRRaycastManager;
     private ARPlaneManager aRPlaneManager;
-    private List<ARRaycastHit> hits = new List<ARRaycastHit> ();
-    
+    private List<ARRaycastHit> hits = new List<ARRaycastHit>();
+    private GameObject placedObject; // Variable to store the currently placed object
+
     private void Awake()
     {
         aRRaycastManager = GetComponent<ARRaycastManager>();
@@ -37,16 +38,15 @@ public class PlaceObject : MonoBehaviour
 
     private void FingerDown(EnhancedTouch.Finger finger)
     {
-        if (finger.index != 0) return;
+        if (finger.index != 0 || placedObject != null) return; // Check if an object is already placed
 
         if (aRRaycastManager.Raycast(finger.currentTouch.screenPosition, hits, TrackableType.PlaneWithinPolygon))
         {
-            foreach(ARRaycastHit hit in hits)
+            foreach (ARRaycastHit hit in hits)
             {
                 Pose pose = hit.pose;
-                GameObject obj = Instantiate(prefab, pose.position, pose.rotation);
+                placedObject = Instantiate(prefab, pose.position, pose.rotation); // Store the reference to the placed object
             }
         }
-
     }
 }
