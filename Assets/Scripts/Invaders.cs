@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class Invaders : MonoBehaviour
 {
     // 
-    public Invader[] prefabs; // an array of prefbas that correspond to each row within our grid each row instatiates each prefab
+    public Invader3D[] prefabs; // an array of prefbas that correspond to each row within our grid each row instatiates each prefab
 
     // for the invader grid
     public int rows = 5;
@@ -36,8 +36,8 @@ public class Invaders : MonoBehaviour
         // 2d for loop to loop through each row and column
         for (int row = 0; row < this.rows; row++)
         {
-            float width = 2.0f * (this.columns - 1); // spacing of invaders * total amount of columns
-            float height = 2.0f * (this.rows - 1);  // spacing (2.0) * total amount of rows
+            float width = 1.0f * (this.columns - 1); // spacing of invaders * total amount of columns
+            float height = 10.0f * (this.rows - 1);  // spacing (2.0) * total amount of rows
 
             // centering need to subrtract half of the total of our grid
             Vector2 centering = new Vector2(-width /2, -height /2); // center is halfway of each edge of grid
@@ -49,7 +49,7 @@ public class Invaders : MonoBehaviour
             {
                 // this.transform will make Invaders class the Parent so we can move the entire grid of invaders
                 // not just each indivdual invader
-                Invader invader = Instantiate(this.prefabs[row], this.transform);
+                Invader3D invader = Instantiate(this.prefabs[row], this.transform);
 
                 // when killed delegate gets called will invoke InvaderKilled method
                 invader.killed += InvaderKilled;
