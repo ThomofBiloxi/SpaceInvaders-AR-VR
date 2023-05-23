@@ -36,8 +36,8 @@ public class Invaders : MonoBehaviour
         // 2d for loop to loop through each row and column
         for (int row = 0; row < this.rows; row++)
         {
-            float width = 1.0f * (this.columns - 1); // spacing of invaders * total amount of columns
-            float height = 10.0f * (this.rows - 1);  // spacing (2.0) * total amount of rows
+            float width = 4.0f * (this.columns - 1); // spacing of invaders * total amount of columns
+            float height = 4.0f * (this.rows - 1);  // spacing (2.0) * total amount of rows
 
             // centering need to subrtract half of the total of our grid
             Vector2 centering = new Vector2(-width /2, -height /2); // center is halfway of each edge of grid
@@ -60,7 +60,7 @@ public class Invaders : MonoBehaviour
 
                 // this will be the offset. size of invader is 1 unit plus 1 pad = 2
                 // column is x axis and rows is y axis
-                position.x += col * 2.0f;
+                position.x += col * 4.0f;
                 invader.transform.localPosition = position;
             }
         }

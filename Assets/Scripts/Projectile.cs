@@ -15,7 +15,7 @@ public class Projectile : MonoBehaviour
     }
 
     // Unity function for anytime collider is triggered
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter(Collider other)
     {
         if (this.destroyed != null)
         {
