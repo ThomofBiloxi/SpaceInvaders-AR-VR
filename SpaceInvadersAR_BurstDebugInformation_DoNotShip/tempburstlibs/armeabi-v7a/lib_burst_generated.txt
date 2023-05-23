@@ -1,7 +1,7 @@
 Library: lib_burst_generated
 --platform=Android
 --backend=burst-llvm-11
---target=ARMV8A_AARCH64
+--target=ARMV7A_NEON32
 --global-safety-checks-setting=Off
 --dump=Function
 --float-precision=Standard
@@ -116,7 +116,6 @@ Library: lib_burst_generated
 --compilation-defines=ENABLE_INPUT_SYSTEM
 --compilation-defines=ENABLE_LEGACY_INPUT_MANAGER
 --compilation-defines=TEXTCORE_FONT_ENGINE_1_5_OR_NEWER
---compilation-defines=USE_INPUT_SYSTEM_POSE_CONTROL
 --compilation-defines=UNITY_CCU
 --compilation-defines=CSHARP_7_OR_LATER
 --compilation-defines=CSHARP_7_3_OR_NEWER
@@ -151,7 +150,7 @@ Library: lib_burst_generated
 --compilation-defines=UNITY_PROPERTIES_EXISTS
 --generate-link-xml=Temp\burst.link.xml
 --debug=Full
---output=B:\Space Invaders AR\Temp\StagingArea\tempburstlibs\arm64-v8a\lib_burst_generated
+--output=B:\Space Invaders AR\Temp\StagingArea\tempburstlibs\armeabi-v7a\lib_burst_generated
 --root-assembly=B:\Space Invaders AR\Temp\StagingArea\Data\Managed\UnityEngine.SpatialTracking.dll
 --root-assembly=B:\Space Invaders AR\Temp\StagingArea\Data\Managed\Unity.XR.OpenXR.dll
 --root-assembly=B:\Space Invaders AR\Temp\StagingArea\Data\Managed\UnityEngine.UI.dll
