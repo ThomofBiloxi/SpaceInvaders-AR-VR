@@ -32,7 +32,7 @@ public class Invaders : MonoBehaviour
 
     
     private void Awake()
-    {
+    {   float spacing = 4.0f;
         // 2d for loop to loop through each row and column
         for (int row = 0; row < this.rows; row++)
         {
@@ -43,7 +43,7 @@ public class Invaders : MonoBehaviour
             Vector2 centering = new Vector2(-width /2, -height /2); // center is halfway of each edge of grid
 
             // apply centering to center the grid and start a starting position
-            Vector3 rowPosition = new Vector3(centering.x, centering.y + (row * 2.0f), 0.0f); // setting the y axis here
+            Vector3 rowPosition = new Vector3(centering.x, centering.y + (row * spacing), 0.0f); // setting the y axis here
 
             for (int col = 0; col < this.columns; col++)
             {
@@ -60,7 +60,8 @@ public class Invaders : MonoBehaviour
 
                 // this will be the offset. size of invader is 1 unit plus 1 pad = 2
                 // column is x axis and rows is y axis
-                position.x += col * 4.0f;
+                position.x += col * spacing;
+                position.y += row * spacing;
                 invader.transform.localPosition = position;
             }
         }

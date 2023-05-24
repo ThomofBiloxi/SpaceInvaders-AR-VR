@@ -153,6 +153,7 @@ Library: lib_burst_generated
 --output=B:\Space Invaders AR\Temp\StagingArea\tempburstlibs\armeabi-v7a\lib_burst_generated
 --root-assembly=B:\Space Invaders AR\Temp\StagingArea\Data\Managed\UnityEngine.SpatialTracking.dll
 --root-assembly=B:\Space Invaders AR\Temp\StagingArea\Data\Managed\Unity.XR.OpenXR.dll
+--root-assembly=B:\Space Invaders AR\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=B:\Space Invaders AR\Temp\StagingArea\Data\Managed\UnityEngine.UI.dll
 --root-assembly=B:\Space Invaders AR\Temp\StagingArea\Data\Managed\Unity.VisualScripting.Flow.dll
 --root-assembly=B:\Space Invaders AR\Temp\StagingArea\Data\Managed\Unity.Mathematics.dll
@@ -175,7 +176,6 @@ Library: lib_burst_generated
 --root-assembly=B:\Space Invaders AR\Temp\StagingArea\Data\Managed\Unity.XRTools.ModuleLoader.dll
 --root-assembly=B:\Space Invaders AR\Temp\StagingArea\Data\Managed\Unity.Properties.dll
 --root-assembly=B:\Space Invaders AR\Temp\StagingArea\Data\Managed\Unity.ListViewFramework.dll
---root-assembly=B:\Space Invaders AR\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=B:\Space Invaders AR\Temp\StagingArea\Data\Managed\Unity.XR.Management.dll
 --root-assembly=B:\Space Invaders AR\Temp\StagingArea\Data\Managed\Unity.XR.InteractionSubsystems.dll
 --root-assembly=B:\Space Invaders AR\Temp\StagingArea\Data\Managed\Unity.Jobs.dll
