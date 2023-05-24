@@ -123,6 +123,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &35724684 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7886590302675534136, guid: 9c11ed5c6e09d6e468262ebf3fcee242,
+    type: 3}
+  m_PrefabInstance: {fileID: 4646351577792283679}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68140332b6b3842459ef623c13446632, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &298130221
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -195,6 +207,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: player
       objectReference: {fileID: 0}
+    - target: {fileID: 5549869821151217854, guid: 4a9bcf34e4c0b4b48b3dc9b52def5ebf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a9bcf34e4c0b4b48b3dc9b52def5ebf, type: 3}
 --- !u!1 &373430734
@@ -207,7 +224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 373430736}
   - component: {fileID: 373430735}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Invaders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,8 +247,9 @@ MonoBehaviour:
   - {fileID: 2800286469106622280, guid: f9452464552ff5a4bb6cc6f2acf572b6, type: 3}
   - {fileID: 7886590302675534136, guid: 9c11ed5c6e09d6e468262ebf3fcee242, type: 3}
   - {fileID: 7668058773044962142, guid: e12f7c3d4ef641245a82be9d6a6bc665, type: 3}
+  - {fileID: 35724684}
   rows: 5
-  columns: 11
+  columns: 6
   speed:
     serializedVersion: 2
     m_Curve: []
@@ -248,7 +266,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 373430734}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 20, z: 0}
+  m_LocalPosition: {x: 0, y: 18.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -321,6 +339,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: alien1A
+      objectReference: {fileID: 0}
+    - target: {fileID: 3034850437313403414, guid: f9452464552ff5a4bb6cc6f2acf572b6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3034850437313403414, guid: f9452464552ff5a4bb6cc6f2acf572b6,
         type: 3}
@@ -406,7 +429,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1127133563}
   m_LocalRotation: {x: 0.19595255, y: -0, z: -0, w: 0.98061335}
-  m_LocalPosition: {x: 0, y: 31.9, z: -31.7}
+  m_LocalPosition: {x: 0, y: 35.3, z: -33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -650,6 +673,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 793299005704320453, guid: 826c612c2f0d4ab44b8c47e4e24e26b7,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4918408015993898980, guid: 826c612c2f0d4ab44b8c47e4e24e26b7,
         type: 3}
       propertyPath: m_RootOrder
@@ -710,6 +738,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: laserPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 5695473137549860190, guid: 826c612c2f0d4ab44b8c47e4e24e26b7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 826c612c2f0d4ab44b8c47e4e24e26b7, type: 3}
 --- !u!1001 &3647547764786427957
@@ -723,6 +756,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: alien3A
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774597386172818298, guid: e12f7c3d4ef641245a82be9d6a6bc665,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3774597386172818298, guid: e12f7c3d4ef641245a82be9d6a6bc665,
         type: 3}
@@ -797,6 +835,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: alien2A
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720504379390813905, guid: 9c11ed5c6e09d6e468262ebf3fcee242,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2720504379390813905, guid: 9c11ed5c6e09d6e468262ebf3fcee242,
         type: 3}

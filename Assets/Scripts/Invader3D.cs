@@ -62,7 +62,7 @@ public class Invader3D : MonoBehaviour
     }
 
     // when projectile hits invader gets destroyed
-    private void OnTriggerEnter2D(Collider2D other)  // unity trgger function collides with other game object
+    private void OnTriggerEnter(Collider other)  // unity trgger function collides with other game object
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Laser"))  // this is the Layer "Laser" we made in editor
         {
