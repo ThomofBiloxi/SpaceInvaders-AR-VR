@@ -34,7 +34,7 @@ public class Invaders : MonoBehaviour
     private void Awake()
     {   float spacing = 4.0f;
         // 2d for loop to loop through each row and column
-        for (int row = 0; row < this.rows; row++)
+        for (int row = 0; row <= this.rows; row++)
         {
             float width = 4.0f * (this.columns - 1); // spacing of invaders * total amount of columns
             float height = 4.0f * (this.rows - 1);  // spacing (2.0) * total amount of rows
