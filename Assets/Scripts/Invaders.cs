@@ -151,6 +151,7 @@ public class Invaders : MonoBehaviour
     private void InvaderKilled()
     {
         this.amountKilled++;
+        ScoreManager.instance.AddPoint(10);
 
         // for no scoring. Just reloads scene. Acts to restart game
         if (this.amountKilled >= this.totalInvaders)
