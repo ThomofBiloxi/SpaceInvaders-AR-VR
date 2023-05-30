@@ -5,19 +5,21 @@ using UnityEngine.InputSystem;
 
 public class PlayerInputController : MonoBehaviour
 {
-    private bool moveLeft, moveRight, fire;
+    private bool moveLeft, moveRight, fire, pause;
 
     void FixedUpdate()
     {
-        if (fire)
+        //if (fire)
             //BaseController.Instance.Fire();
-            Debug.Log("Player Fired");
-        if (moveLeft)
+            //Debug.Log("Player Fired");
+        //if (moveLeft)
             //BaseController.Instance.MoveLeft();
-            Debug.Log("Player Moved Left");
-        if (moveRight)
+            //Debug.Log("Player Moved Left");
+        //if (moveRight)
             //BaseController.Instance.MoveRight();
-            Debug.Log("Player Moved Right");
+            //Debug.Log("Player Moved Right");
+        //if (pause)
+            //Debug.Log("Player Paused");
     }
 
     public void OnFire(InputValue inputValue)
@@ -36,5 +38,11 @@ public class PlayerInputController : MonoBehaviour
     {
         moveRight = inputValue.isPressed;
         print("player moved right");
+    }
+
+    public void OnPause(InputValue inputValue)
+    {
+        pause = inputValue.isPressed;
+        print("player paused");
     }
 }

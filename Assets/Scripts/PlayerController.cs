@@ -49,10 +49,14 @@ public class PlayerController : MonoBehaviour
         
 
         // if user presses another input shoot laser
-        if (Input.GetKeyDown(KeyCode.Space) || Keyboard.current.spaceKey.isPressed) // mousebuttondown 0 means left click
+        if (!PauseController.gameIsPaused)
         {
-            Shoot();
+            if (Input.GetKeyDown(KeyCode.Space) || Keyboard.current.spaceKey.isPressed) // mousebuttondown 0 means left click
+            {
+                Shoot();
+            }
         }
+        
     }
 
     public void MoveLeft()

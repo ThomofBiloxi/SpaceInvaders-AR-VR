@@ -33,7 +33,7 @@ public class Invader3D : MonoBehaviour
         animationFrame = 0;
         model1.SetActive(true);
         model2.SetActive(false);
-        Debug.Log("object active");
+        //Debug.Log("object active");
     }
 
     // everytime this is called this update which frame we are on
@@ -56,7 +56,7 @@ public class Invader3D : MonoBehaviour
             animationFrame = 0;
         }
 
-        Debug.Log("Animation frame: " + animationFrame);
+        //Debug.Log("Animation frame: " + animationFrame);
 
         //_meshRenderer.mesh = this.animationMeshes[_animationFrame];
     }
@@ -78,7 +78,7 @@ public class Invader3D : MonoBehaviour
         if (Keyboard.current.spaceKey.wasPressedThisFrame) // mousebuttondown 0 means left click
         {
             AnimateMesh();
-            Debug.Log("object animate");
+            //Debug.Log("object animate");
         }
     }
 
