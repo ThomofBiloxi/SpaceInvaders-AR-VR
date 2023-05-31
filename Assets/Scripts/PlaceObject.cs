@@ -11,6 +11,9 @@ public class PlaceObject : MonoBehaviour
     [SerializeField]
     private GameObject prefab;
 
+    [SerializeField]
+    private GameObject UI;
+
     private ARRaycastManager aRRaycastManager;
     private ARPlaneManager aRPlaneManager;
     private List<ARRaycastHit> hits = new List<ARRaycastHit>();
@@ -45,7 +48,9 @@ public class PlaceObject : MonoBehaviour
             foreach (ARRaycastHit hit in hits)
             {
                 Pose pose = hit.pose;
-                placedObject = Instantiate(prefab, pose.position, pose.rotation); // Store the reference to the placed object
+                placedObject = Instantiate(prefab, pose.position, pose.rotation);
+                
+                UI.SetActive(true); // Store the reference to the placed object
             }
         }
     }
