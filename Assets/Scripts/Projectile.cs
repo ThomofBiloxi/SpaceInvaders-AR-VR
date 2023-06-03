@@ -23,6 +23,6 @@ public class Projectile : MonoBehaviour
         }
 
         // anytime projectile collides with something destroy projectile game object
-        Destroy(this.gameObject);
+        // Destroy(this.gameObject);
     }
 }

@@ -31,11 +31,11 @@ public class InvadersGrid : MonoBehaviour
         // Form the grid of invaders
         for (int i = 0; i < rows; i++)
         {
-            float width = 2.5f * (columns - 1);
-            float height = 4f * (rows - 1);
+            float width = 0.1f * (columns - 1);
+            float height = 0.1f * (rows - 1);
 
             Vector2 centerOffset = new Vector2(-width * 0.5f, -height * 0.5f);
-            Vector3 rowPosition = new Vector3(centerOffset.x, (3.0f * i) + centerOffset.y, 0f);
+            Vector3 rowPosition = new Vector3(centerOffset.x, (1.4f * i) + centerOffset.y, 0f);
 
             for (int j = 0; j < columns; j++)
             {
@@ -45,7 +45,7 @@ public class InvadersGrid : MonoBehaviour
 
                 // Calculate and set the position of the invader in the row
                 Vector3 position = rowPosition;
-                position.x += 3.0f * j;
+                position.x += 1.5f * j;
                 invader.transform.localPosition = position;
             }
         }
@@ -107,12 +107,12 @@ public class InvadersGrid : MonoBehaviour
             }
 
             // Check the left edge or right edge based on the current direction
-            if (direction == Vector3.right && invader3D.position.x >= (rightEdge.x + 10f))
+            if (direction == Vector3.right && invader3D.position.x >= (rightEdge.x + 2f))
             {
                 AdvanceRow();
                 break;
             }
-            else if (direction == Vector3.left && invader3D.position.x <= (leftEdge.x - 10f))
+            else if (direction == Vector3.left && invader3D.position.x <= (leftEdge.x - 2f))
             {
                 AdvanceRow();
                 break;
