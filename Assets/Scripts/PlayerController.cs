@@ -76,7 +76,7 @@ public class PlayerController : MonoBehaviour
         characterController.Move(speed * Time.deltaTime * move);
     }
 
-    private void Shoot()
+    public void Shoot()
         {
         // when user shoots it will instantiate a new instance of the prefab
         // the position should be psotion where you are shooting from this case the player position

@@ -24,6 +24,10 @@ public class InvadersGrid : MonoBehaviour
     public Projectile missilePrefab;
     public float missileSpawnRate = 1f;
 
+    [Header("Boundaries")]
+    public GameObject LeftBoundary;
+    public GameObject RightBoundary;
+
     private void Awake()
     {
         initialPosition = transform.position;
@@ -87,14 +91,8 @@ public class InvadersGrid : MonoBehaviour
     private void Update()
     {
         // Evaluate the speed of the invaders based on how many have been killed
-        float speed = this.speed.Evaluate(PercentKilled);
-        transform.position += direction * speed * Time.deltaTime * 1.0f;
-
-
-         //Transform the viewport to world coordinates so we can check when the
-         //invaders reach the edge of the screen
-        Vector3 leftEdge = Camera.main.ViewportToWorldPoint(Vector3.zero);
-        Vector3 rightEdge = Camera.main.ViewportToWorldPoint(Vector3.right);
+        float invaderSpeed = this.speed.Evaluate(PercentKilled);
+        transform.position += direction * invaderSpeed * Time.deltaTime * 1.0f;
 
         // The invaders will advance to the next row after reaching the edge of
         // the screen
@@ -107,12 +105,12 @@ public class InvadersGrid : MonoBehaviour
             }
 
             // Check the left edge or right edge based on the current direction
-            if (direction == Vector3.right && invader3D.position.x >= (rightEdge.x + 2f))
+            if (direction == Vector3.right && invader3D.position.x >= RightBoundary.transform.position.x)
             {
                 AdvanceRow();
                 break;
             }
-            else if (direction == Vector3.left && invader3D.position.x <= (leftEdge.x - 2f))
+            else if (direction == Vector3.left && invader3D.position.x <= LeftBoundary.transform.position.x)
             {
                 AdvanceRow();
                 break;
@@ -127,7 +125,7 @@ public class InvadersGrid : MonoBehaviour
 
         // Move the entire grid of invaders down a row
         Vector3 position = transform.position;
-        position.y -= 0.5f;
+        position.y -= 0.1f;
         transform.position = position;
     }
 
