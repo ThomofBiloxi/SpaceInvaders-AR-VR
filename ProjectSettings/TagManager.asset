@@ -17,9 +17,9 @@ TagManager:
   - Invader
   - Laser
   - Missile
-  - 
-  - 
-  - 
+  - LeftBoundary
+  - RightBoundary
+  - Shield
   - 
   - 
   - 

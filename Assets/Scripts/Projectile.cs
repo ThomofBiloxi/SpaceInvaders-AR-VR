@@ -15,7 +15,18 @@ public class Projectile : MonoBehaviour
     }
 
     // Unity function for anytime collider is triggered
-    private void OnTriggerEnter(Collider other)
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (this.destroyed != null)
+    //    {
+    //        this.destroyed.Invoke(); // a way to allow other scripts when an event happens
+    //    }
+
+    //    // anytime projectile collides with something destroy projectile game object
+    //    Destroy(this.gameObject);
+    //}
+
+    private void OnCollisionEnter(Collision collision)
     {
         if (this.destroyed != null)
         {
@@ -23,6 +34,6 @@ public class Projectile : MonoBehaviour
         }
 
         // anytime projectile collides with something destroy projectile game object
-        // Destroy(this.gameObject);
+        Destroy(this.gameObject);
     }
 }

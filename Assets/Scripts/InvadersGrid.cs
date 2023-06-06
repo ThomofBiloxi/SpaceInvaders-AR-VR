@@ -9,7 +9,7 @@ public class InvadersGrid : MonoBehaviour
    // public float speed = 0.2f;
     public Vector3 direction { get; private set; } = Vector3.right;
     public Vector3 initialPosition { get; private set; }
-    public System.Action<Invader3D> killed;
+    public System.Action<Invader3Dupdate> killed;
     
     public int AmountKilled { get; private set; }
     public int AmountAlive => TotalAmount - AmountKilled;
@@ -45,7 +45,7 @@ public class InvadersGrid : MonoBehaviour
             {
                 // Create an invader and parent it to this transform
                 Invader3Dupdate invader = Instantiate(prefabs[i], transform);
-                // invader.killed += OnInvaderKilled;
+                invader.killed += OnInvaderKilled;
 
                 // Calculate and set the position of the invader in the row
                 Vector3 position = rowPosition;
@@ -129,11 +129,11 @@ public class InvadersGrid : MonoBehaviour
         transform.position = position;
     }
 
-    private void OnInvaderKilled(Invader3D invader)
+    private void OnInvaderKilled(Invader3Dupdate invader3Dupdate)
     {
-        invader.gameObject.SetActive(false);
+        invader3Dupdate.gameObject.SetActive(false);
         AmountKilled++;
-        killed(invader);
+        killed(invader3Dupdate);
     }
 
     public void ResetInvaders()
@@ -147,4 +147,29 @@ public class InvadersGrid : MonoBehaviour
             invader.gameObject.SetActive(true);
         }
     }
+
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    foreach (Transform invader3D in transform)
+    //    {
+    //        //// Skip any invaders that have been killed
+    //        if (!invader3D.gameObject.activeInHierarchy)
+    //        {
+    //            continue;
+    //        }
+
+    //        // Check the left edge or right edge based on the current direction
+    //        if (direction == Vector3.right && invader3D.position.x >= RightBoundary.transform.position.x)
+    //        {
+    //            AdvanceRow();
+    //            break;
+    //        }
+    //        else if (direction == Vector3.left && invader3D.position.x <= LeftBoundary.transform.position.x)
+    //        {
+    //            AdvanceRow();
+    //            break;
+    //        }
+    //    }
+    //}
+
 }

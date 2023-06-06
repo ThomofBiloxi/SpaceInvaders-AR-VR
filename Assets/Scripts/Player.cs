@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 
     public Projectile laserPrefab; // prefab var that holds the projectile script
     public float speed = 5.0f; // speed variable
+    
 
     // in Space Invaders there can only be one laser bullet at a time on screen
     private bool _laserActive;
@@ -22,6 +23,7 @@ public class Player : MonoBehaviour
         // moves the player to left or right when A or D or arrow keys are pressed
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) {
             // same as invaders movement also deltatime to be aware of frame rate
+            
             this.transform.position += Vector3.left * this.speed * Time.deltaTime;
         } else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {

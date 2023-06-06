@@ -14,7 +14,7 @@ public class Invader3Dupdate : MonoBehaviour
     private int _animationFrame; // which sprite we are using which will just be an index # in our sprite array
 
     // delegate to inform other scripts that invader was killed
-    public System.Action killed;
+    public System.Action<Invader3Dupdate> killed;
 
     //public GameObject model1;
     //public GameObject model2;
@@ -60,12 +60,23 @@ public class Invader3Dupdate : MonoBehaviour
     }
 
     // when projectile hits invader gets destroyed
-    private void OnTriggerEnter(Collider other)  // unity trgger function collides with other game object
+    //private void OnTriggerEnter(Collider other)  // unity trgger function collides with other game object
+    //{
+    //    if (other.gameObject.layer == LayerMask.NameToLayer("Laser"))  // this is the Layer "Laser" we made in editor
+    //    {
+    //        //_meshRenderer.mesh = this.splat[0];
+    //        this.killed.Invoke();
+
+    //        this.gameObject.SetActive(false);  // completely turns off game object so it stops rendering
+    //    }
+    //}
+
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Laser"))  // this is the Layer "Laser" we made in editor
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Laser"))  // this is the Layer "Laser" we made in editor
         {
             //_meshRenderer.mesh = this.splat[0];
-            this.killed.Invoke();
+            this.killed.Invoke(this);
 
             this.gameObject.SetActive(false);  // completely turns off game object so it stops rendering
         }
