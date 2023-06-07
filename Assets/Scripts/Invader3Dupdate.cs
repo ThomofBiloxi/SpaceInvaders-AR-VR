@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using UnityEngine.SceneManagement;
 
 public class Invader3Dupdate : MonoBehaviour
 {
@@ -79,6 +79,10 @@ public class Invader3Dupdate : MonoBehaviour
             this.killed.Invoke(this);
 
             this.gameObject.SetActive(false);  // completely turns off game object so it stops rendering
+        }
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Shield"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 

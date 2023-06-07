@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerContBK : MonoBehaviour
 {
@@ -133,5 +134,6 @@ public class PlayerContBK : MonoBehaviour
         {
             GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
