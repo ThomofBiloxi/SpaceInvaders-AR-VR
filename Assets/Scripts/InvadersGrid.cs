@@ -133,7 +133,7 @@ public class InvadersGrid : MonoBehaviour
     {
         invader3Dupdate.gameObject.SetActive(false);
         AmountKilled++;
-        killed(invader3Dupdate);
+        killed?.Invoke(invader3Dupdate); // Safely invoke the event
     }
 
     public void ResetInvaders()

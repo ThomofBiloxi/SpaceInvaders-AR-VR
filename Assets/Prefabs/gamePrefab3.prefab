@@ -682,12 +682,12 @@ PrefabInstance:
     - target: {fileID: 4902774352709301008, guid: c2bcd11366354457c92c740268da9ce2,
         type: 3}
       propertyPath: m_Name
-      value: playerBK
+      value: PlayerLaser
       objectReference: {fileID: 0}
     - target: {fileID: 4902774352709301008, guid: c2bcd11366354457c92c740268da9ce2,
         type: 3}
       propertyPath: m_TagString
-      value: Laser
+      value: PlayerLaser
       objectReference: {fileID: 0}
     - target: {fileID: 5711118346637961642, guid: c2bcd11366354457c92c740268da9ce2,
         type: 3}

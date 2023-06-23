@@ -1,11 +1,9 @@
 # For line ending normalization between Unix and Windows
 * text=auto
-
 # Unity 
 *.cs diff=csharp text
 *.cginc text
 *.shader text
-
 *.mat -text merge=unityyamlmerge diff
 *.anim -text merge=unityyamlmerge diff
 *.unity -text merge=unityyamlmerge diff
@@ -15,3 +13,4 @@
 *.asset -text merge=unityyamlmerge diff
 *.meta -text merge=unityyamlmerge diff
 *.controller -text merge=unityyamlmerge diff
+.apk filter=lfs diff=lfs merge=lfs -text

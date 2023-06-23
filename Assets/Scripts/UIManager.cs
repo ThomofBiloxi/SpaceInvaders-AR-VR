@@ -7,7 +7,7 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         // Find the game object with the "Laser" tag and get the PlayerController component
-        GameObject playerObject = GameObject.FindGameObjectWithTag("Laser");
+        GameObject playerObject = GameObject.FindGameObjectWithTag("PlayerLaser");
         playerController = playerObject.GetComponent<PlayerController>();
     }
 

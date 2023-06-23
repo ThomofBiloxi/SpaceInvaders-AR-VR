@@ -76,7 +76,7 @@ public class Invader3Dupdate : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Laser"))  // this is the Layer "Laser" we made in editor
         {
             //_meshRenderer.mesh = this.splat[0];
-            this.killed.Invoke(this);
+            this.killed?.Invoke(this);
 
             this.gameObject.SetActive(false);  // completely turns off game object so it stops rendering
         }
